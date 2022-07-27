@@ -1,0 +1,41 @@
+body {
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div.contenedor {
+    height: 100vh;
+    margin: 2% 2% 0 2%;
+}
+
+div.cuerpo {
+    display: block;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.bt-submit /*, .bt-volver*/ {
+    margin-top: 70px;
+}
+
+.bt-volver {
+    margin-top: 2%;
+}
+
+.btn-submit {
+    width:40%;
+}
+
+.tb-consulta {
+    width: 60%;
+    margin: 70px auto;
+    background-color: #D5F2FD;
+}
+
+.text-center {
+    bottom: 0;
+}

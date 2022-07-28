@@ -10,19 +10,18 @@
 </head>
 
 <body>
-        <!--Comienzo navbar-->
-        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
-      <a class="navbar-brand" href="html/alta.html">Alta alumnos</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="php/consulta.php">Administrar alumnos</a>
-          </li>
+  <div class="contenedor">
+  
+    <!--Comienzo navbar-->
+    <nav class="navbar navbar-default" style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" style="margin-left: 10px;" href="../index.html">Inicio</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="../html/alta.html">Alta alumnos</a></li>
+          <li><a href="consulta.php">Administrar alumno</a></li>
         </ul>
       </div>
     </nav>
@@ -41,7 +40,7 @@
         or die("No se pudo conectar");
 
     //Query
-    $registro = mysqli_query($conexion, "insert into alumnos (nombre, mail, codigoCurso) values('$nombre', '$email', '$codigo')")
+    $registro = mysqli_query($conexion, "insert into alumnos (nombre, mail, codigocurso) values('$nombre', '$email', '$codigo')")
         or die("No se pudo insertar" . mysqli_error($conexion));
 
     //Cierro conexion
@@ -50,15 +49,18 @@
      //Mensaje
     if($registro){
         echo "";
-        echo "<h1>Usuario insertado correctamente</h1>";//si todo va bien
+        echo "<h1>Usuario insertado correctamente!</h1>";//si todo va bien
     }else{
         echo "";
-        echo "<h1>Nos se ha podido registrar el usuario</h1>";//si NO va bien
+        echo "<h1>Nos se ha podido registrar el usuario!</h1>";//si NO va bien
     }//
 
     ?>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -10,23 +10,20 @@
 </head>
 
 <body>
+    <div class="contenedor">
         <!--Comienzo navbar-->
-        <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
-      <a class="navbar-brand" href="html/alta.html">Alta alumnos</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="php/consulta.php">Administrar alumnos</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--Fin navbar-->
+        <nav class="navbar navbar-default" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" style="margin-left: 10px;" href="../index.html">Inicio</a>
+            </div>
+            <ul class="nav navbar-nav">
+            <li><a href="../html/alta.html">Alta alumnos</a></li>
+            <li><a href="consulta.php">Administrar alumno</a></li>
+            </ul>
+        </div>
+        </nav>
+        <!--Fin navbar-->
 
     <?php 
         $codigo = $_REQUEST['codigo'];
@@ -45,34 +42,34 @@
         while ($reg = mysqli_fetch_array($registros)) {
             $nombre = $reg['nombre'];
             $mail = $reg['mail'];
-            $codigoCurso = $reg['codigoCurso'];
+            $codigocurso = $reg['codigocurso'];
         }
 
         //Cerrar conexion
         mysqli_close($conexion);
     ?>
 
-    <div class="contenedor">
     <h1>Modificar alumno!</h1>
+    <p><i>Cambie los datos que quiera modificar</i></p>
 
         <form action="modificar2.php" method="POST">
             <div class="form-group">
-                <input type="hidden" name="codigo" value="<?php echo $codigo; ?>">
+                <input class="input-modificar" type="hidden" name="codigo" value="<?php echo $codigo; ?>">
             </div>
 
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" value="<?php echo $nombre; ?>">
+                <input class="input-modificar" type="text" name="nombre" value="<?php echo $nombre; ?>">
             </div>
 
             <div class="form-group">
                 <label for="mail">Email:</label>
-                <input type="text" name="mail" value="<?php echo $mail; ?>">
+                <input class="input-modificar" type="text" name="mail" value="<?php echo $mail; ?>">
             </div>
 
             <div class="form-group">
-                <label for="codigoCurso">Codigo curso:</label>
-                <input type="text" name="codigoCurso" value="<?php echo $codigoCurso; ?>">
+                <label for="codigocurso">Codigo curso:</label>
+                <input class="input-modificar" type="text" name="codigocurso" value="<?php echo $codigocurso; ?>">
             </div>
 
             <div class="bt-submit">
@@ -81,7 +78,10 @@
         </form>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
     </body>
 
 </html>

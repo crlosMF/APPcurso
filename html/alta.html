@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ALta alumno</title>
+  <title>Alta alumno</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/estilo.css" rel="stylesheet">
 </head>
@@ -12,9 +12,9 @@
 <body>
   <div class="contenedor">
 
-      <!--Comienzo navbar-->
-    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
-      <a class="navbar-brand" href="alta.html">Alta alumnos</a>
+    <!--Comienzo navbar-->
+    <nav class="navbar navbar-expand-lg"  style="background-color: #e3f2fd;">
+      <a class="navbar-brand nav-inicio" style="margin-left: 10px; padding: 10px" href="../index.html">Inicio</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,22 +22,12 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="alta.html">Alta alumnos</a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="../php/consulta.php">Administrar alumno</a>
           </li>
-          <!--
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            -->
         </ul>
       </div>
     </nav>
@@ -48,13 +38,13 @@
     <!--Comienzo formulario-->
     <form action="../php/alta.php" method="post">
       <div class="form-group">
-        <label for="exampleInputEmail1">Ingresa nombre del alumno</label>
+        <label for="exampleInputEmail1">Ingrese el nombre del alumno</label>
         <input type="text" class="form-control" name="nombre" id="exampleInputEmail1" aria-describedby="emailHelp"
-          placeholder="Enter email">
+          placeholder="Escriba su email" style="width: 30%;">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Introduce el email del alumno</label>
-        <input type="email" class="form-control" name="email" id="exampleInputPassword1" placeholder="Password">
+        <label for="exampleInputPassword1">Introduzca el email del alumno</label>
+        <input type="email" class="form-control" name="email" id="exampleInputPassword1" placeholder="Escriba la contraseña" style="width: 30%;">
       </div>
 
       <div class="form-group form-check">
@@ -78,9 +68,9 @@
     </form>
     <!--Fin formulario-->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
